@@ -14,7 +14,7 @@ class GestioneAppelliTest {
 		
 		Docente d = new Docente("Natella");
 		Studente s1 = new Studente("Egidia", "Cirillo", "N46", 1234);
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		Data first = new Data(LocalDate.of(2019, 12, 18), Tipologia.Calcolatore, Sede.Aula);
 		
 		dataAppelli.add(first);
 		
@@ -43,7 +43,7 @@ class GestioneAppelliTest {
 		Docente d = new Docente("Natella");
 		Studente s1 = new Studente("Egidia", "Cirillo", "N46", 1234);
 		Studente s2= new Studente("Luigi", "Bianchi", "N46", 5678);
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		Data first = new Data(LocalDate.of(2019, 11, 18), Tipologia.Calcolatore, Sede.Aula);
 		dataAppelli.add(first);
 		
 		Corso c = gestione.creaCorso("IS", d, 9);
@@ -71,7 +71,7 @@ class GestioneAppelliTest {
 		
 
 		Docente d = new Docente("Natella");
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		Data first = new Data(LocalDate.of(2019, 12, 18), Tipologia.Calcolatore, Sede.Aula);
 		
 		dataAppelli.add(first);
 		
@@ -87,14 +87,14 @@ class GestioneAppelliTest {
 
 	@Test
 
-	public void test4StudentePrenotatoDueVoltePerLoStessoAppello() throws Exception{
+	public void test4StudentePrenotatoDueVolteLoStessoAppello() throws Exception{
 
 		GestioneAppelli gestione = new GestioneAppelli();
 
 		ArrayList<Data> dataAppelli = new ArrayList<>();
 		Docente d = new Docente("Natella");
 		Studente s1 = new Studente("Egidia", "Cirillo", "N46", 1234);
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		Data first = new Data(LocalDate.of(2019, 12, 18), Tipologia.Calcolatore, Sede.Aula);
 		dataAppelli.add(first); 
 		
 		Corso c = gestione.creaCorso("IS", d, 9);
@@ -123,7 +123,7 @@ class GestioneAppelliTest {
 		
 		Docente d = new Docente("Natella");
 		Studente s1 = new Studente("Egidia", "Cirillo", "N46", 1234);
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);;
+		Data first = new Data(LocalDate.of(2019, 12, 18), Tipologia.Calcolatore, Sede.Aula);;
 		
 		dataAppelli.add(first);
 
@@ -154,7 +154,7 @@ class GestioneAppelliTest {
 		
 		Docente d = new Docente("Natella");
 		Studente s1 = new Studente("Egidia", "Cirillo", "N46", 1234);
-		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);;
+		Data first = new Data(LocalDate.of(2019, 12, 18), Tipologia.Calcolatore, Sede.Aula);;
 		
 		dataAppelli.add(first);
 		
@@ -178,7 +178,7 @@ class GestioneAppelliTest {
 
 @Test
 
-public void test7StudenteSiPrenotaAdUnAppelloSenzaDate() throws Exception{
+public void test7StudentePrenotaUnAppelloSenzaDate() throws Exception{
 
 	GestioneAppelli gestione = new GestioneAppelli();
 
@@ -198,7 +198,7 @@ public void test7StudenteSiPrenotaAdUnAppelloSenzaDate() throws Exception{
 	}
 
 @Test
-public void test8UnoStudenteSiPrenotaAppelloApertoUnoStudenteSiPrenotaAppelloChiuso() throws Exception{
+public void test8UnoStudentePrenotaAppelloApertoUnoStudentePrenotaAppelloChiuso() throws Exception{
 	GestioneAppelli gestione = new GestioneAppelli();
 
 	ArrayList<Data> dataAppelli = new ArrayList<>();
@@ -224,7 +224,7 @@ public void test8UnoStudenteSiPrenotaAppelloApertoUnoStudenteSiPrenotaAppelloChi
 }
 
 @Test
-public void test9UnoStudenteSiPrenotaAppelloConPiudate() throws Exception{
+public void test9StudentePrenotaAppelloConPiudate() throws Exception{
 	GestioneAppelli gestione = new GestioneAppelli();
 
 	ArrayList<Data> dataAppelli = new ArrayList<>();
@@ -248,7 +248,7 @@ public void test9UnoStudenteSiPrenotaAppelloConPiudate() throws Exception{
 	
 	
 @Test
-public void test10UnoStudenteSiPrenotaADueAppelliApertiEUnoChiuso() throws Exception{
+public void test10StudentePrenotaDueAppelliApertiEUnoChiuso() throws Exception{
 	GestioneAppelli gestione = new GestioneAppelli();
 
 	ArrayList<Data> dataAppelli = new ArrayList<>();

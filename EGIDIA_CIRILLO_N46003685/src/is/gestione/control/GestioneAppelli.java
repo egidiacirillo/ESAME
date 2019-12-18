@@ -1,10 +1,11 @@
 package is.gestione.control;
-import java.util.ArrayList;
+import java.util.*;
 import is.gestione.entity.*;
 
 public class GestioneAppelli {
 	
 	ArrayList<Corso> listaCorsi = new ArrayList<>();
+	ArrayList<Data> listaDate= new ArrayList<>();
 
 	public GestioneAppelli() {
 	}
@@ -14,38 +15,46 @@ public class GestioneAppelli {
 		return c;
 		}
 	
-	public Appello creaAppello(ArrayList<Data> date, boolean concluso, Corso corso) {
+	public Appello creaAppello(ArrayList<Data> date, boolean concluso, Corso c) {
 		Appello a = new Appello(date, concluso);
 		
-		if(listaCorsi.contains(corso)) {
+		if(listaCorsi.contains(c)) {
 
-			corso.addAppello(a);
+			c.addAppello(a);
 
 		}else {
 
-			listaCorsi.add(corso);
+			listaCorsi.add(c);
 
-			corso.addAppello(a);
-
-		}
-		
-		corso.addAppello(a);
+			c.addAppello(a);
+			}
+		c.addAppello(a);
 		return a;
 		
 		}
 	
-	public void prenotaStudente(Studente s, Appello appello) {
-		if(appello.getIsConcluso()==true) {
+	public void aggiungiData(Data data) {
 
-			System.out.println("Appello è stato chiuso, impossibile effettuare la prenotazione");
+		this.listaDate.add(data);
+		} 
+
+	public  ArrayList<Data> elencoDate(){
+
+		return this.listaDate;
 		}
-		else if(appello.getDate().isEmpty()) {
-			System.out.println("Non ci sono date per questo appello prenotazione fallita");
+	
+	public void prenotaStudente(Studente s, Appello a) {
+		if(a.getIsConcluso()==true) {
+
+			System.out.println("L'appello è stato chiuso, impossibile effettuare la prenotazione");
+		}
+		else if(a.getDate().isEmpty()) {
+			System.out.println("Non ci sono date per questo appello, la prenotazione è fallita");
 			
 		}
-		else if(!appello.getStudenti().contains(s)) {
+		else if(!a.getStudenti().contains(s)) {
 
-			appello.addStudente(s);
+			a.addStudente(s);
 
 		}else {
 
