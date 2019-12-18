@@ -31,7 +31,7 @@ public ArrayList<Studente> getStudenti(){
 	return studentiPrenotati;
 	}
 
-public void setAppelli(ArrayList<Data> _date) {
+public void setDate(ArrayList<Data> _date) {
 	elenco_date = _date;
 	 }
 

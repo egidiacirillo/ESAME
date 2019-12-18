@@ -4,14 +4,14 @@ import java.time.LocalDate;
 public class Data {
 
 	protected LocalDate data;
-	protected Tipologia tipo;
+	protected Tipologia tipoProva;
 	protected Sede luogo;
 
 public Data(LocalDate _data, Tipologia _tipo, Sede _luogo) {
 
 		this.data= _data;
 		luogo=_luogo;
-		tipo=_tipo;
+		tipoProva=_tipo;
 
 	}
 
@@ -21,7 +21,7 @@ public LocalDate getData() {
 	}
 
 public Tipologia getTipo() {
-	return tipo;
+	return tipoProva;
 
 	}
 
