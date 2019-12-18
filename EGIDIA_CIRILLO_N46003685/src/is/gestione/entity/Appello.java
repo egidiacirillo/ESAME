@@ -3,13 +3,13 @@ import java.util.ArrayList;
 
 public class Appello {
 	
-	ArrayList<Data> appelli;
+	ArrayList<Data> elenco_date;
     boolean isConcluso;
     ArrayList<Studente> studentiPrenotati;
     
     public Appello() {
     	
-        appelli = new ArrayList<Data>();
+    	elenco_date = new ArrayList<Data>();
         isConcluso = false;
         studentiPrenotati = new ArrayList<Studente>();
        
@@ -17,7 +17,7 @@ public class Appello {
 
 public Appello(ArrayList<Data> date, boolean concluso) {
 	
-	appelli = date;
+	elenco_date = date;
 	isConcluso = concluso;
 	studentiPrenotati = new ArrayList<Studente>();
 	
@@ -31,20 +31,12 @@ public ArrayList<Studente> getStudenti(){
 	return studentiPrenotati;
 	}
 
-public ArrayList<Data> getAppello(){
-	return appelli;
-	}
-
-public void setAppello(ArrayList<Data> _appelli) {
-	appelli = _appelli;
-	}
-
 public void setAppelli(ArrayList<Data> _date) {
-	  appelli = _date;
+	elenco_date = _date;
 	 }
 
 public ArrayList<Data>getDate(){
-	return appelli;
+	return elenco_date;
 }
 
 
@@ -57,7 +49,7 @@ public void setisConcluso(boolean _concluso) {
 	}
 
 public void addData(Data _data) {
-	appelli.add(_data);
+	elenco_date.add(_data);
 	}
 
 public String toString() {
